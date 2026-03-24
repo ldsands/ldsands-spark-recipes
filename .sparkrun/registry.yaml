@@ -1,8 +1,10 @@
 registries:
   - name: my-experimental-recipes
-    subpath: /../recipes/experimental
     description: My experimental custom recipes
+    subpath: experimental-recipes
+    benchmarks: benchmarking
 
   - name: my-stable-recipes
-    subpath: /../recipes/stable
     description: My stable custom recipes
+    subpath: stable-recipes
+    benchmarks: benchmarking
