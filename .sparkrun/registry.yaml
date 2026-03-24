@@ -1,10 +1,10 @@
 registries:
-  - name: my-experimental-recipes
+  - name: ldsands-experimental-recipes
     description: My experimental custom recipes
     recipes: experimental-recipes
     benchmarks: benchmarking
 
-  - name: my-stable-recipes
+  - name: ldsands-stable-recipes
     description: My stable custom recipes
     recipes: stable-recipes
     benchmarks: benchmarking
