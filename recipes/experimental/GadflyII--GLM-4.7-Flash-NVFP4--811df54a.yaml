@@ -1,0 +1,32 @@
+recipe_version: "1"
+name: GLM-4.7-Flash-NVFP4
+description: vLLM recipe for GLM-4.7-Flash-NVFP4
+model: GadflyII/GLM-4.7-Flash-NVFP4
+runtime: vllm
+container: vllm-node-tf5
+solo_only: true
+cluster_only: false
+mods:
+  - mods/fix-Salyut1-GLM-4.7-NVFP4
+defaults:
+  port: 8000
+  host: 0.0.0.0
+  tensor_parallel: 1
+  gpu_memory_utilization: 0.85
+  max_model_len: auto
+  max_num_batched_tokens: 8192
+env: {}
+command: |
+  vllm serve GadflyII/GLM-4.7-Flash-NVFP4 \
+      --load-format fastsafetensors \
+      --enable-prefix-caching \
+      --enable-auto-tool-choice \
+      --kv-cache-dtype fp8 \
+      --gpu-memory-utilization {gpu_memory_utilization} \
+      --port {port} \
+      --host {host} \
+      --max-model-len auto \
+      --max-num-batched-tokens {max_num_batched_tokens} \
+      --tool-call-parser glm47 \
+      --reasoning-parser glm45 \
+      -tp {tensor_parallel}
