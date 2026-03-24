@@ -1,5 +1,5 @@
 recipe_version: "1"
-name: Qwen3-30B-A3B-Instruct-2507-AWQ-4bit
+name: cyankiwi/Qwen3-30B-A3B-Instruct-2507-AWQ-4bit
 description: vLLM recipe for Qwen3-30B-A3B-Instruct-2507-AWQ-4bit
 model: cyankiwi/Qwen3-30B-A3B-Instruct-2507-AWQ-4bit
 runtime: vllm
