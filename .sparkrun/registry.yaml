@@ -4,7 +4,7 @@ registries:
     recipes: experimental-recipes
     benchmarks: benchmarking
 
-  - name: ldsands-stable-recipes
-    description: My stable custom recipes
-    recipes: stable-recipes
-    benchmarks: benchmarking
+  # - name: ldsands-stable-recipes
+  #   description: My stable custom recipes
+  #   recipes: stable-recipes
+  #   benchmarks: benchmarking
