@@ -1,0 +1,10 @@
+# taken directly from https://raw.githubusercontent.com/spark-arena/recipe-registry/refs/heads/main/benchmarking/spark-arena-v1.yaml on 2026-03-24
+framework: llama-benchy
+metadata:
+  description: Spark Arena Benchmark Profile v1
+args:
+  depth: [ 0, 4096, 8192, 16384, 32768, 65535, 100000 ]
+  pp: [ 2048 ]
+  tg: [ 128 ]
+  concurrency: [ 1, 2, 5, 10 ]
+  prefix_caching: true
