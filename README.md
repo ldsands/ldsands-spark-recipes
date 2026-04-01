@@ -1,5 +1,16 @@
 # ldsands-spark-recipes
 
+## Running models
+
+```sh
+# simple local run command
+sparkrun run --hosts localhost cyankiwi--Qwen3-30B-A3B-Instruct-2507-AWQ-4bit--8b1dd01a
+sparkrun run --hosts localhost cyankiwi--Qwen3-30B-A3B-Instruct-2507-AWQ-4bit--8b1dd01a
+sparkrun run --hosts localhost --cache-dir $env.EXTERNAL_HUGGINGFACE_MODELS_DIR cyankiwi--Qwen3-30B-A3B-Instruct-2507-AWQ-4bit--8b1dd01a
+# to reattach to something run this command to see what is running then it'll give you the command to reattch (logs) and stop (stop) the running container
+sparkrun status --hosts localhost
+```
+
 ## Benchmarking
 
 ```sh
@@ -34,6 +45,4 @@ sparkrun setup fix-permissions --cluster myspark_external_cache
 sparkrun setup clear-cache --save-sudo --hosts myspark_external_cache
 # if that doesn't work then try the below
 chmod -R 755 $env.EXTERNAL_HUGGINGFACE_MODELS_DIR
-
-
 ```
